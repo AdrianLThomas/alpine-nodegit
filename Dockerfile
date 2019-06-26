@@ -9,7 +9,7 @@ RUN yum -y install \
     && yum clean all
 
 # Rebuild nodegit for this image
-RUN BUILD_ONLY=true npm install -g nodegit
+RUN BUILD_ONLY=true npm install nodegit
 
 # Make yarn available
 RUN npm install -g yarn && yarn --version 

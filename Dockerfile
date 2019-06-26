@@ -9,7 +9,7 @@ RUN yum -y install \
     && yum clean all
 
 # Rebuild nodegit for this image
-RUN BUILD_ONLY=true npm install nodegit
+RUN BUILD_ONLY=true npm install nodegit --save && rm package-lock.json
 
 # Make yarn available
 RUN npm install -g yarn && yarn --version 

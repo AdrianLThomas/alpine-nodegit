@@ -13,3 +13,6 @@ RUN BUILD_ONLY=true npm install nodegit --save && rm package-lock.json
 
 # Make yarn available
 RUN npm install -g yarn && yarn --version 
+
+# Fix for libcurl
+RUN ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4
